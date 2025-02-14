@@ -1,0 +1,105 @@
+:root {
+  /* Colors */
+  --PRIMARY-COLOR: #28a745;
+  --SECONDARY-COLOR: #dc3545;
+  --TEXT-COLOR: #333;
+  --BACKGROUND-COLOR: #f4f4f9;
+  --WHITE-COLOR: #ffffff;
+  --SHADOW-COLOR: rgba(0, 0, 0, 0.1);
+  --BORDER-COLOR: #ccc;
+  --FOCUS-COLOR: rgba(40, 167, 69, 0.5);
+
+  /* Spacing */
+  --PADDING-LARGE: 2rem;
+  --PADDING-MEDIUM: 1rem;
+  --PADDING-SMALL: 0.5rem;
+  --GAP-MEDIUM: 0.5rem;
+  --GAP-SMALL: 0.25rem;
+
+  /* Sizes */
+  --BORDER-RADIUS: 5px;
+  --INPUT-WIDTH: 95%;
+  --BUTTON-PADDING: 0.75rem 1.5rem;
+  --BUTTON-FONT-SIZE: 1.1rem;
+  --DISPLAY-FONT-SIZE: 1.25rem;
+  --CONTAINER-MIN-WIDTH: 400px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--BACKGROUND-COLOR);
+}
+
+.container {
+  text-align: center;
+  background-color: var(--WHITE-COLOR);
+  padding: var(--PADDING-LARGE);
+  border-radius: var(--BORDER-RADIUS);
+  box-shadow: 0 4px 8px var(--SHADOW-COLOR);
+  min-width: var(--CONTAINER-MIN-WIDTH);
+  width: 100%;
+  max-width: 500px;
+}
+
+#username {
+  padding: var(--PADDING-SMALL);
+  font-size: 1rem;
+  border: 2px solid var(--BORDER-COLOR);
+  border-radius: var(--BORDER-RADIUS);
+  width: var(--INPUT-WIDTH);
+  margin-bottom: var(--PADDING-MEDIUM);
+}
+
+#username:focus {
+  border-color: var(--PRIMARY-COLOR);
+  outline: none;
+  box-shadow: 0 0 5px var(--FOCUS-COLOR);
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: var(--GAP-MEDIUM);
+  width: 100%;
+}
+
+#save-btn,
+#clear-btn {
+  padding: var(--BUTTON-PADDING);
+  font-size: var(--BUTTON-FONT-SIZE);
+  border: none;
+  border-radius: var(--BORDER-RADIUS);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex: 1; /* Make buttons take equal space */
+}
+
+#save-btn {
+  background-color: var(--PRIMARY-COLOR);
+  color: var(--WHITE-COLOR);
+}
+
+#save-btn:hover {
+  background-color: #218838;
+}
+
+#clear-btn {
+  background-color: var(--SECONDARY-COLOR);
+  color: var(--WHITE-COLOR);
+}
+
+#clear-btn:hover {
+  background-color: #c82333;
+}
+
+#display-name {
+  font-size: var(--DISPLAY-FONT-SIZE);
+  font-weight: 200;
+  color: var(--TEXT-COLOR);
+  margin-top: var(--PADDING-MEDIUM);
+}
