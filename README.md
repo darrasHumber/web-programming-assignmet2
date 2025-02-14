@@ -1,1 +1,1 @@
-# web-programming-assignmet2
+# Web Programming Assignmet 2
